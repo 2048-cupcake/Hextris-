@@ -251,7 +251,7 @@ function hideUIElements() {
 function init(b) {
     if(settings.ending_block && b == 1){return;}
     if (b) {
-        $("#pauseBtn").attr('src',"./images/btn_pause.svg");
+        $("#pauseBtn").attr('src',"https://2048-cupcake.github.io/Hextris-/images/btn_pause.svg");
         if ($('#helpScreen').is(":visible")) {
             $('#helpScreen').fadeOut(150, "linear");
         }
@@ -272,7 +272,7 @@ function init(b) {
         $("#currentHighScore").text(highscores[0])
     }
     infobuttonfading = true;
-    $("#pauseBtn").attr('src',"./images/btn_pause.svg");
+    $("#pauseBtn").attr('src',"https://2048-cupcake.github.io/Hextris-/images/btn_pause.svg");
     hideUIElements();
     var saveState = localStorage.getItem("saveState") || "{}";
     saveState = JSONfn.parse(saveState);
@@ -484,13 +484,13 @@ function showHelp() {
 		$('#startBtn').toggle();
     }
     
-    if ($('#openSideBar').attr('src') == './images/btn_back.svg') {
-        $('#openSideBar').attr('src', './images/btn_help.svg');
+    if ($('#openSideBar').attr('src') == 'https://2048-cupcake.github.io/Hextris-/images/btn_back.svg') {
+        $('#openSideBar').attr('src', 'https://2048-cupcake.github.io/Hextris-/images/btn_help.svg');
         if (gameState != 0 && gameState != -1 && gameState != 2) {
             $('#fork-ribbon').fadeOut(150, 'linear');
         }
     } else {
-        $('#openSideBar').attr('src', './images/btn_back.svg');
+        $('#openSideBar').attr('src', 'https://2048-cupcake.github.io/Hextris-/images/btn_back.svg');
         if (gameState == 0 && gameState == -1 && gameState == 2) {
             $('#fork-ribbon').fadeIn(150, 'linear');
         }
@@ -520,7 +520,7 @@ function showHelp() {
     if (gameState == 1) {
         pause();
     }
-    if($("#pauseBtn").attr('src') == "./images/btn_pause.svg" && gameState != 0 && !infobuttonfading) {
+    if($("#pauseBtn").attr('src') == "https://2048-cupcake.github.io/Hextris-/images/btn_pause.svg" && gameState != 0 && !infobuttonfading) {
         return;
     }
     $("#openSideBar").fadeIn(150,"linear");
@@ -902,9 +902,9 @@ function setMainMenu() {
     }, 500);
     $('#restartBtn').hide();
     if ($("#pauseBtn").replace(/^.*[\\\/]/, '') == "btn_pause.svg") {
-        $("#pauseBtn").attr("src","./images/btn_resume.svg");
+        $("#pauseBtn").attr("src","https://2048-cupcake.github.io/Hextris-/images/btn_resume.svg");
     } else {
-        $("#pauseBtn").attr("src","./images/btn_pause.svg");
+        $("#pauseBtn").attr("src","https://2048-cupcake.github.io/Hextris-/images/btn_pause.svg");
     }
 }
 
@@ -961,7 +961,7 @@ function pause(o) {
         if ($('#helpScreen').is(':visible')) {
             $('#helpScreen').fadeOut(300, "linear");
         }
-        $("#pauseBtn").attr("src", "./images/btn_pause.svg");
+        $("#pauseBtn").attr("src", "https://2048-cupcake.github.io/Hextris-/images/btn_pause.svg");
         $('.helpText').fadeOut(300, 'linear');
         $('#overlay').fadeOut(300, 'linear');
         hideText();
@@ -977,7 +977,7 @@ function pause(o) {
             showText(message);
         }
         $('#fork-ribbon').fadeIn(300, 'linear');
-        $("#pauseBtn").attr("src","./images/btn_resume.svg");
+        $("#pauseBtn").attr("src","https://2048-cupcake.github.io/Hextris-/images/btn_resume.svg");
         $('#overlay').fadeIn(300, 'linear');
         prevGameState = gameState;
         setTimeout(function() {
